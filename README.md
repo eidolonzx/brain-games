@@ -6,4 +6,4 @@ hexlet-basics# project-lvl1-s340
 
 [![Build Status](https://travis-ci.org/eidolonzx/project-lvl1-s340.svg?branch=master)](https://travis-ci.org/eidolonzx/project-lvl1-s340)
 
-<link rel="alternate" type="application/x-asciicast" href="https://asciinema.org/a/u2KtMsVDyQA5GCHCJpVCDQxzA">
+https://asciinema.org/a/u2KtMsVDyQA5GCHCJpVCDQxzA
