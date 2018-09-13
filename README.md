@@ -6,4 +6,7 @@ hexlet-basics# project-lvl1-s340
 
 [![Build Status](https://travis-ci.org/eidolonzx/project-lvl1-s340.svg?branch=master)](https://travis-ci.org/eidolonzx/project-lvl1-s340)
 
-https://asciinema.org/a/u2KtMsVDyQA5GCHCJpVCDQxzA
+Шаг 4: https://asciinema.org/a/u2KtMsVDyQA5GCHCJpVCDQxzA
+
+Шаг 5: https://asciinema.org/a/9EuxypGbrq2gOclpsLyZJNlFh
+

@@ -1,30 +1,44 @@
 import readlineSync from 'readline-sync';
 
-const brainEven = () => {
+let currentTurn = 1; // начинаем с раунда номер 1
+const gameTurns = 3; // всего три раунда
 
-  console.log('Welcome to the Brain Even!');
-  console.log('Answer "yes" if number even otherwise answer "no".');
+const getName = () => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
+  return name;
+};
 
-  const isEven = (counter) => {
-    if (counter > 3) {
-      console.log(`Congratulations, ${name}!`);
-      return;
-    }
-    const number = Math.floor(Math.random() * 100) + 1;
-    console.log(`Question: ${number}`);
-    const answer = readlineSync.question('Your answer: ');
-    if ((answer === 'yes' && number % 2 === 0) || (answer === 'no' && number % 2 !== 0)) {
-      console.log('Correct!');
-      isEven(counter + 1);
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer is '${number % 2 === 0 ? 'yes' : 'no'}'`);
-      console.log(`Let's try again, ${name}!`);
-    }
-  };
+const toPlay = (gameCondition) => {
+  if (currentTurn > gameTurns) return true;
+  const condition = gameCondition();
+  const question = condition[0];
+  const rightAnswer = condition[1];
+  // задаём вопрос:
+  console.log(`Question: ${question}`);
+  // слушаем ответ:
+  const playersAnswer = readlineSync.question('Your answer: ');
 
-  isEven(1);
-}
+  if (playersAnswer === rightAnswer) console.log('Correct!');
+  else {
+    console.log(`'${playersAnswer}' is wrong answer ;( Correct answer was '${rightAnswer}'`);
+    return false;
+  }
+  currentTurn += 1;
+  return toPlay(gameCondition);
+};
 
-export default brainEven;
+
+const mainGame = (gameName, gameRule, gameCondition) => {
+  // выводим приветствие и правила
+  console.log(`Welcome to the ${gameName}!`);
+  console.log(gameRule);
+  // запрашиваем имя игрока
+  const playerName = getName();
+  // играем
+  const isWin = toPlay(gameCondition);
+  if (isWin) console.log(`Congratulations, ${playerName}!`);
+  else console.log(`Let's try again, ${playerName}!`);
+};
+
+export default mainGame;
