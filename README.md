@@ -10,3 +10,4 @@ hexlet-basics# project-lvl1-s340
 
 Шаг 5: https://asciinema.org/a/9EuxypGbrq2gOclpsLyZJNlFh
 
+Шаг 6: https://asciinema.org/a/JzKzJ8PgGay6KpjfsBYh9sfV9
