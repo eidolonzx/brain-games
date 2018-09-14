@@ -1,0 +1,27 @@
+import mainGame from '..';
+import getNumber from '../generate-number';
+
+const getGcd = (firstNum, secondNum) => {
+  let a = firstNum;
+  let b = secondNum;
+  while (a !== b) {
+    if (a > b) a -= b;
+    else b -= a;
+  }
+  return a;
+};
+
+const gameName = 'Brain GCD';
+const gameRule = 'Find the greatest common divisor of given numbers.';
+const gameCondition = () => {
+  const number1 = getNumber(1, 100);
+  const number2 = getNumber(1, 100);
+  const question = `${number1} ${number2}`;
+  const rightAnswer = String(getGcd(number1, number2));
+  const condition = [question, rightAnswer];
+  return condition;
+};
+
+const brainGcd = () => mainGame(gameName, gameRule, gameCondition);
+
+export default brainGcd;

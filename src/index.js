@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
-let currentTurn = 1; // начинаем с раунда номер 1
-const gameTurns = 3; // всего три раунда
+let currentTurn = 1;
+const gameTurns = 3;
 
 const getName = () => {
   const name = readlineSync.question('May I have your name? ');
@@ -14,9 +14,8 @@ const toPlay = (gameCondition) => {
   const condition = gameCondition();
   const question = condition[0];
   const rightAnswer = condition[1];
-  // задаём вопрос:
+
   console.log(`Question: ${question}`);
-  // слушаем ответ:
   const playersAnswer = readlineSync.question('Your answer: ');
 
   if (playersAnswer === rightAnswer) console.log('Correct!');
@@ -30,12 +29,9 @@ const toPlay = (gameCondition) => {
 
 
 const mainGame = (gameName, gameRule, gameCondition) => {
-  // выводим приветствие и правила
   console.log(`Welcome to the ${gameName}!`);
   console.log(gameRule);
-  // запрашиваем имя игрока
   const playerName = getName();
-  // играем
   const isWin = toPlay(gameCondition);
   if (isWin) console.log(`Congratulations, ${playerName}!`);
   else console.log(`Let's try again, ${playerName}!`);
