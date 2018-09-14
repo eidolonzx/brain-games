@@ -1,6 +1,7 @@
 import mainGame from '..';
 import getNumber from '../generate-number';
 
+/*
 const getGcd = (firstNum, secondNum) => {
   let a = firstNum;
   let b = secondNum;
@@ -9,6 +10,13 @@ const getGcd = (firstNum, secondNum) => {
     else b -= a;
   }
   return a;
+};
+*/
+
+const getGcd = (firstNum, secondNum) => {
+  if (firstNum === secondNum) return firstNum;
+  if (firstNum > secondNum) return getGcd(firstNum - secondNum, secondNum);
+  return getGcd(firstNum, secondNum - firstNum);
 };
 
 const gameName = 'Brain GCD';
