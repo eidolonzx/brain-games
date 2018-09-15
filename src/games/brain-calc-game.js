@@ -7,27 +7,17 @@ const gameCondition = () => {
   const number1 = getNumber(1, 9);
   const number2 = getNumber(1, 9);
   const typeOfExpression = getNumber(1, 3);
-  let rightAnswer;
-  let expression = '';
   switch (typeOfExpression) {
     case 1:
-      rightAnswer = number1 + number2;
-      expression = '+';
-      break;
+      return [`${number1} + ${number2}`, String(number1 + number2)];
     case 2:
-      rightAnswer = number1 - number2;
-      expression = '-';
-      break;
+      return [`${number1} - ${number2}`, String(number1 - number2)];
     case 3:
-      rightAnswer = number1 * number2;
-      expression = '*';
-      break;
+      return [`${number1} * ${number2}`, String(number1 * number2)];
     default:
       break;
   }
-  const question = `${number1} ${expression} ${number2}`;
-  const condition = [question, String(rightAnswer)];
-  return condition;
+  return ['default return', '42'];
 };
 
 const brainCalc = () => mainGame(gameName, gameRule, gameCondition);

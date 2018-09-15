@@ -9,8 +9,7 @@ const makeStringFromSameNumbers = (number, numberCount) => {
 };
 
 const sum = (number) => {
-  // const str = number.toString();
-  return [...number.toString()].map(e => parseInt(e, 10)).reduce((a, b) => a + b);
+  [...number.toString()].map(e => parseInt(e, 10)).reduce((a, b) => a + b);
 };
 
 const getBalance = (num) => {

@@ -1,18 +1,6 @@
 import mainGame from '..';
 import getNumber from '../generate-number';
 
-/*
-const getGcd = (firstNum, secondNum) => {
-  let a = firstNum;
-  let b = secondNum;
-  while (a !== b) {
-    if (a > b) a -= b;
-    else b -= a;
-  }
-  return a;
-};
-*/
-
 const getGcd = (firstNum, secondNum) => {
   if (firstNum === secondNum) return firstNum;
   if (firstNum > secondNum) return getGcd(firstNum - secondNum, secondNum);
