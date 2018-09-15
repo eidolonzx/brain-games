@@ -1,20 +1,16 @@
 import mainGame from '..';
 import getNumber from '../generate-number';
 
-const makeString = (num, count) => {
-  if (count === 0) {
+const makeStringFromSameNumbers = (number, numberCount) => {
+  if (numberCount === 0) {
     return '';
   }
-  return `${num}${makeString(num, count - 1)}`;
+  return `${number}${makeStringFromSameNumbers(number, numberCount - 1)}`;
 };
 
 const sum = (number) => {
-  let count = 0;
-  const str = number.toString();
-  for (let i = 0; i < str.length; i += 1) {
-    count += Number(str[i]);
-  }
-  return count;
+  // const str = number.toString();
+  return [...number.toString()].map(e => parseInt(e, 10)).reduce((a, b) => a + b);
 };
 
 const getBalance = (num) => {
@@ -25,8 +21,8 @@ const getBalance = (num) => {
   const maxNumeral = minNumeral + 1;
   const minNumeralCount = lengthOfNumber * maxNumeral - sumOfNumerals;
   const maxNumeralCount = lengthOfNumber - minNumeralCount;
-  const minsPartOfNum = makeString(minNumeral, minNumeralCount);
-  const maxxPartOfNum = makeString(maxNumeral, maxNumeralCount);
+  const minsPartOfNum = makeStringFromSameNumbers(minNumeral, minNumeralCount);
+  const maxxPartOfNum = makeStringFromSameNumbers(maxNumeral, maxNumeralCount);
   return `${minsPartOfNum}${maxxPartOfNum}`;
 };
 
