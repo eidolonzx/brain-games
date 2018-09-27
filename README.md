@@ -1,20 +1,22 @@
-hexlet-basics# project-lvl1-s340
+## Some simply console brain-games.
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
 
-[![Build Status](https://travis-ci.org/eidolonzx/project-lvl1-s340.svg?branch=master)](https://travis-ci.org/eidolonzx/project-lvl1-s340)
+[![Build Status](https://travis-ci.org/eidolonzx/project-lvl1-s340.svg?branch=master)](https://travis-ci.org/eidolonzx/brain-games)
 
-Шаг 4: https://asciinema.org/a/u2KtMsVDyQA5GCHCJpVCDQxzA
+## Install
 
-Шаг 5: https://asciinema.org/a/9EuxypGbrq2gOclpsLyZJNlFh
+via npm: *npm install -g brain-games-eidolonzx
 
-Шаг 6: https://asciinema.org/a/JzKzJ8PgGay6KpjfsBYh9sfV9
+## Play
 
-шаг 7: https://asciinema.org/a/LiMkjrt830tKNV4Dcd1ZcfNn1
+type name of the game to console to play:
 
-Шаг 8: https://asciinema.org/a/DKe1kQGAVc2aH7zw1cHM9SenU
-
-Шаг 9: https://asciinema.org/a/PsUxfGhQFje8w80pofFqJTwvp
-
+1. brain-calc
+2. brain-balance
+3. brain-even
+4. brain-gcd
+5. brain-prime
+6. brain-progression
