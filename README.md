@@ -8,15 +8,15 @@
 
 ## Install
 
-via npm: *npm install -g brain-games-eidolonzx
+via npm: `npm install -g brain-games-eidolonzx`
 
 ## Play
 
 type name of the game to console to play:
 
-1. brain-calc
-2. brain-balance
-3. brain-even
-4. brain-gcd
-5. brain-prime
-6. brain-progression
+1. `brain-calc`
+2. `brain-balance`
+3. `brain-even`
+4. `brain-gcd`
+5. `brain-prime`
+6. `brain-progression`
